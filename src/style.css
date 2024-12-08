@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+} */
+
+@layer base {
+  html {
+    font-family: 'Open Sans', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .menu-item {
+    @apply text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium;
+  }
+
+  .btn {
+    @apply
+      px-4
+      py-2
+      rounded-full
+      text-sm
+      text-zinc-800
+      font-medium
+      focus:outline-none
+      focus:ring-2
+      focus:ring-offset-2
+      focus:ring-blue-500
+      transition-colors
+      duration-200
+      border-2
+      font-bold
+  }
+
+  .btn-primary {
+    @apply border-amber-400 bg-amber-300 hover:bg-amber-400
+  }
+
+  .btn-outline {
+    @apply border-zinc-500 bg-zinc-200 hover:bg-zinc-300
+  }
+
+
+
+  .balloon {
+    position: relative;
+    width: 6rem; /* Adjust width */
+    height: 8rem; /* Adjust height */
+    background-color: inherit;
+    border-radius: 50% 50% 25% 25%; /* Rounded top, flatter bottom */
+    transform-origin: center;
+  }
+
+  @keyframes randomFloat {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+      transform: translate3d(10px, -20px, 50px) rotate(10deg) scale(1.05);
+    }
+    50% {
+      transform: translate3d(-15px, -30px, 40px) rotate(-10deg) scale(1.1);
+    }
+    75% {
+      transform: translate3d(20px, -25px, 60px) rotate(5deg) scale(1.05);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    }
+  }
+}

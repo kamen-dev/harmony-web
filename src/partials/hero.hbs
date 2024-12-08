@@ -1,0 +1,87 @@
+<section class="my-6 max-w-7xl mx-auto space-y-3 px-4">
+    <h1 class="text-4xl font-serif">
+        Community <br />
+        <span id="words-container" class="hidden">
+            <em>Payment</em>
+            <em>Social</em>
+            <em>Vendor</em>
+            <em>Thrive</em>
+            <em>AI</em>
+        </span>
+        <em id="typing-text" class="text-yellow-500"></em>
+        Platform
+    </h1>
+
+    <div class="max-w-3xl space-y-3">
+        <p>The most comprehensive and innovative community platform
+            focused on community wellbeing and harmony instead of policing and division. </p>
+
+        <p>Next level technology fusion of accessibility, proptech, fintech, social,
+            blockchain and AI, laser focused to help your community to thrive. </p>
+
+        <p>
+            <button class="btn btn-primary">
+                Book Now
+            </button>
+        </p>
+    </div>
+
+    <div class="relative p-8 flex justify-center items-center ">
+        <!-- Balloon 1 -->
+        <div class=" animate-randomFloat">
+            <div class="w-24 h-32 bg-red-500/75 rounded-full shadow-lg"></div>
+            <div class="w-1 h-16 bg-gray-500 mx-auto mt-1"></div>
+        </div>
+
+        <!-- Balloon 2 -->
+        <div class=" animate-randomFloat" style="animation-delay: 1s;">
+            <div class="w-20 h-28 bg-blue-400/75 rounded-full shadow-lg"></div>
+            <div class="w-1 h-14 bg-gray-500 mx-auto mt-1"></div>
+        </div>
+
+        <!-- Balloon 3 -->
+        <div class=" animate-randomFloat" style="animation-delay: 2s;">
+            <div class="w-16 h-24 bg-green-400/75 rounded-full shadow-lg"></div>
+            <div class="w-1 h-12 bg-gray-500 mx-auto mt-1"></div>
+        </div>
+
+        <!-- Balloon 4 -->
+        <div class=" animate-randomFloat" style="animation-delay: 3s;">
+            <div class="w-28 h-36 bg-yellow-400/75 rounded-full shadow-lg"></div>
+            <div class="w-1 h-12 bg-gray-500 mx-auto mt-2"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function () {
+    const typingText = document.getElementById('typing-text');
+    const words = document.getElementById('words-container').getElementsByTagName('em');
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeWord() {
+        const currentWord = words[wordIndex].innerText;
+        const diff = isDeleting ? -1 : 1;
+        typingText.textContent = currentWord.substring(0, charIndex + diff);
+        charIndex = charIndex + diff;
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            if (wordIndex === words.length - 1) return;
+            isDeleting = true;
+            setTimeout(typeWord, 1500);
+        }
+        else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex++;
+            setTimeout(typeWord, 500);
+        }
+        else {
+            setTimeout(typeWord, isDeleting ? 100 : 200);
+        }
+    }
+    typeWord();
+})();
+</script>
+
