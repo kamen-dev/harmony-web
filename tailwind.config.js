@@ -9,8 +9,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Open Sans', ...defaultTheme.fontFamily.sans],
-      'serif': ['Playfair Display', ...defaultTheme.fontFamily.serif],
+      'sans': ['"Open Sans"', ...defaultTheme.fontFamily.sans],
+      'serif': ['"Playfair Display"', ...defaultTheme.fontFamily.serif],
     },
     extend: {
       keyframes: {

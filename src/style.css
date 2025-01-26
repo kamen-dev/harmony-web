@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*
+
+/**
 @font-face {
   font-family: 'Open Sans';
   src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
@@ -27,6 +28,15 @@
 }
 
 @font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+/**/
+
+@font-face {
   font-family: 'Playfair Display';
   src: url('/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -48,7 +58,15 @@
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-} */
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 
 @layer base {
   html {
@@ -86,8 +104,6 @@
   .btn-outline {
     @apply border-zinc-500 bg-zinc-200 hover:bg-zinc-300
   }
-
-
 
   .balloon {
     position: relative;

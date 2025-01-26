@@ -1,5 +1,5 @@
-<nav class="max-w-7xl mx-auto px-4 bg-white/75 backdrop-blur rounded-b-3xl sticky top-0 z-50 shadow-xl">
-    <div class="flex justify-between h-16 items-center">
+<nav class="max-w-7xl mx-auto sticky top-0 z-50">
+    <div class="flex justify-between h-16 px-4 items-center bg-white/75 backdrop-blur rounded-b-3xl shadow-xl">
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
             <a href="#top">
@@ -39,8 +39,8 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden">
-        <div class="px-2 pt-2 pb-6 space-y-1" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
+    <div id="mobile-menu" class="hidden md:hidden absolute w-full mt-2 p-4  bg-white/75 backdrop-blur rounded-3xl shadow-xl">
+        <div class="divide-y divide-gray-400" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
             <a href="#features" class="menu-item block !text-base">Features</a>
             <a href="#pricing" class="menu-item block !text-base">Pricing</a>
             <a href="#testimonials" class="menu-item block !text-base">Testimonials</a>
