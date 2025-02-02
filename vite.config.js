@@ -3,7 +3,7 @@ import handlebars from 'vite-plugin-handlebars';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default {
-    base: "/harmony-web/",
+    base: "/web/",
     plugins: [
         handlebars({
             context: {
